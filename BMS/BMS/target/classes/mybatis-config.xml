@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!-- 实体类中的属性名和数据库中的属性姓名一一对应，类属性驼峰命名 对应 数据库属性下划线命名 -->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <!-- 起别名 -->
+    <typeAliases>
+        <package name="com.bms.entity"/>
+    </typeAliases>
+
+<!--    <mappers>-->
+<!--        <mapper resource="com/bms/mappers/userMapper.xml"/>-->
+<!--    </mappers>-->
+</configuration>

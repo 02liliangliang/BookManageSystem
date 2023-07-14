@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bms.mapper.BookMapper">
+    <select id="getBookBybookName" parameterType="com.bms.entity.Book" resultType="com.bms.entity.Book">
+        SELECT * FROM book WHERE book_name=#{bookName}
+    </select>
+    <select id="getBookBybookCbs" parameterType="com.bms.entity.Book" resultType="com.bms.entity.Book">
+        SELECT * FROM book WHERE book_cbs=#{bookCbs}
+    </select>
+    <select id="getBookBybookSort" parameterType="com.bms.entity.Book" resultType="com.bms.entity.Book">
+        SELECT * FROM book WHERE book_sort=#{bookSort}
+    </select>
+
+    <select id="getBookBybookId" parameterType="int" resultType="Book">
+        SELECT * FROM book WHERE book_id=#{bookId}
+    </select>
+
+    <select id="findAllBook"  resultType="Book">
+        SELECT * FROM book
+    </select>
+    <select id="fuzzysearch" resultType="Book">
+        SELECT
+        *
+        FROM book
+        where
+        <if test="fuzzySearchValue!=null and fuzzySearchValue!=''">
+         ( book_name like concat('%','${fuzzySearchValue}','%')
+               or  book_cbs like concat('%','${fuzzySearchValue}','%')
+               or  book_sort like concat('%','${fuzzySearchValue}','%'))
+        </if>
+    </select>
+
+    <insert id="addBook" parameterType="com.bms.entity.Book">
+        INSERT INTO book(book_name,book_cbs,book_data,book_sort)
+        VALUES (#{bookName},#{bookCbs},#{bookData},#{bookSort})
+    </insert>
+    <delete id="deleteBookById" >
+        DELETE FROM book WHERE book_id=#{bookId}
+    </delete>
+    <update id="upDateBook"  parameterType="com.bms.entity.Book">
+        UPDATE book SET book_name=#{bookName},book_cbs=#{bookCbs},book_data=#{bookData},book_sort=#{bookSort} WHERE book_id=#{bookId}
+    </update>
+</mapper>
