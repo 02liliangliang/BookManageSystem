@@ -14,4 +14,17 @@
 管理员页面——查看图书列表
 ![2.png](BMS/preview/2.png)
 管理员页面——查看图书列表
+![3.png](BMS/preview/3.png)
+管理员页面——添加图书
+![4.png](BMS/preview/4.png)
+管理员页面——修改图书
+![5.png](BMS/preview/5.png)
+管理员页面——删除图书
+![6.png](BMS/preview/6.png)
+管理员页面——查看读者信息，删除读者
+![7.png](BMS/preview/7.png)
+管理员页面——查看通知
+![8.png](BMS/preview/8.png)
+读者页面——查看图书列表
+![9.png](BMS/preview/9.png)
 
