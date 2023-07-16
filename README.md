@@ -9,4 +9,9 @@
 如果使用该项目出现问题，请联系我 Liliangliang7659@163.com
 如果该项目对您有帮助,请star鼓励我。
 # 项目截图
+登陆页面
+![1.png](BMS/preview/1.png)
+管理员页面——查看图书列表
+![2.png](BMS/preview/2.png)
+管理员页面——查看图书列表
 
